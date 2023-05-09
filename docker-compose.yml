@@ -4,7 +4,7 @@ services:
   whatsapp:
     image: hisptanzania/whatsapp:1.0.0
     env_file:
-      - .env
+      - .env.whatsapp
     ports:
       - "4000:4000"
     volumes:
@@ -18,25 +18,25 @@ services:
     ports:
       - "5432:5432"
     env_file:
-      - .env
+      - .env.db
 
   chat-bot:
     image: hisptanzania/chat-bot:1.0.1
     env_file:
-      - .env
+      - .env.chatbot
     ports:
       - "3000:3000"
 
   mediator:
     image: hisptanzania/dhis2-mediator:1.0.0
     env_file:
-      - .env
+      - .env.mediator
     ports:
       - "5000:3000"
 
   visualizer:
     image: hisptanzania/dhis2-visualizer:1.0.0
     env_file:
-      - .env
+      - .env.visualizer
     ports:
       - "7000:7000"
