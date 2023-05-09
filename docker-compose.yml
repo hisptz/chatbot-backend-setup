@@ -32,4 +32,11 @@ services:
     env_file:
       - .env
     ports:
-      - "3000:3000"
+      - "5000:3000"
+
+  visualizer:
+    image: hisptanzania/dhis2-visualizer:1.0.0
+    env_file:
+      - .env
+    ports:
+      - "7000:7000"
