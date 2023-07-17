@@ -2,11 +2,9 @@ version: "3.8"
 
 services:
   whatsapp:
-    image: hisptanzania/whatsapp:1.0.0
+    image: hisptanzania/whatsapp:latest
     env_file:
-      - .env.whatsapp
-    ports:
-      - "4000:4000"
+      - .env
     volumes:
       - ./whatsapp/tokens:/whatsapp/tokens
 
@@ -15,28 +13,31 @@ services:
     container_name: db
     volumes:
       - ./data:/var/lib/postgresql/data
-    ports:
-      - "5432:5432"
     env_file:
-      - .env.db
+      - .env
 
   chat-bot:
-    image: hisptanzania/chat-bot:1.0.1
+    image: hisptanzania/chat-bot:latest
     env_file:
-      - .env.chatbot
-    ports:
-      - "3000:3000"
+      - .env
 
   mediator:
-    image: hisptanzania/dhis2-mediator:1.0.0
+    image: hisptanzania/dhis2-mediator:latest
     env_file:
-      - .env.mediator
-    ports:
-      - "5000:3000"
+      - .env
 
   visualizer:
-    image: hisptanzania/dhis2-visualizer:1.0.0
+    image: hisptanzania/dhis2-visualizer:latest
     env_file:
-      - .env.visualizer
+      - .env
+
+  proxy:
+    image: hisptanzania/proxy:latest
+    container_name: proxy
+    volumes:
+      - ./proxy/config.json:/proxy/config/config.json
     ports:
-      - "7000:7000"
+      - "8089:4040"
+    env_file:
+      - .env
+

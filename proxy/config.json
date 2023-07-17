@@ -1,0 +1,29 @@
+{
+  "$schema": "./config.schema.json",
+  "servers": [
+    {
+      "path": "/engine",
+      "target": {
+        "url": "http://chat-bot:4010"
+      }
+    },
+    {
+      "path": "/whatsapp",
+      "target": {
+        "url": "http://whatsapp:4000"
+      }
+    },
+    {
+      "path": "/visualizer",
+      "target": {
+        "url": "http://visualizer:4030"
+      }
+    },
+    {
+      "path": "/mediator",
+      "target": {
+        "url": "http://mediator:4020"
+      }
+    }
+  ]
+}
