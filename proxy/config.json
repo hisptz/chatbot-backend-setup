@@ -2,9 +2,13 @@
   "$schema": "./config.schema.json",
   "servers": [
     {
-      "path": "/engine",
+      "path": "/bot",
       "target": {
-        "url": "http://chat-bot:4010"
+        "url": "http://chat-bot:4010",
+        "credentials": {
+          "type": "apiKey",
+          "value": "apiKey"
+        }
       }
     },
     {

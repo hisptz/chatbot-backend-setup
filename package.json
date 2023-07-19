@@ -1,0 +1,17 @@
+{
+  "name": "chatbot-backend-setup",
+  "version": "1.0.0",
+  "description": "A setup tool for the DHIS2 analytics messenger",
+  "main": "index.js",
+  "repository": "git@github.com:hisptz/chatbot-backend-setup.git",
+  "author": "Gift Nnko <nnkogift@hotmail.com>",
+  "license": "true",
+  "private": true,
+  "devDependencies": {
+    "bestzip": "^2.2.1",
+    "rimraf": "^5.0.1"
+  },
+  "scripts": {
+    "build": "./build.sh"
+  }
+}
