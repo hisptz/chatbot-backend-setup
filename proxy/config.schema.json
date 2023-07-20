@@ -1,0 +1,41 @@
+{
+  "id": "config.schema",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Configuration for servers to proxy",
+  "type": "object",
+  "properties": {
+    "servers": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Path to which the given server will be forwarded"
+          },
+          "target": {
+            "type": "object",
+            "description": "Target definition",
+            "properties": {
+              "url": {
+                "type": "string"
+              },
+              "credentials": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
