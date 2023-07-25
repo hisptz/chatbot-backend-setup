@@ -1,3 +1,3 @@
 #!/bin/bash
-echo "Stop the Chatboat services..."
+echo "List all the Chatboat services..."
 docker compose ps
