@@ -100,7 +100,7 @@ scan is successful, the phone will show a login notification. Your whatsapp serv
 To see if all services are running, run:
 
 ```shell
- docker compose ps
+ ./list-services.sh
 ```
 
 There should be 6 services running, `db`, `whatsapp`, `chat-bot`, `mediator`, `visualizer` and `proxy`
