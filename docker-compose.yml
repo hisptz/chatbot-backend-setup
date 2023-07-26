@@ -8,9 +8,9 @@ services:
     volumes:
       - ./whatsapp/tokens:/whatsapp/tokens
 
+
   db:
     image: postgres:latest
-    container_name: db
     volumes:
       - ./data:/var/lib/postgresql/data
     env_file:
@@ -33,7 +33,6 @@ services:
 
   proxy:
     image: hisptanzania/proxy:latest
-    container_name: proxy
     ports:
       - "4040:4040"
     env_file:

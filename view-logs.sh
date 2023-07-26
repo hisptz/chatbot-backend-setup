@@ -8,4 +8,4 @@ fi;
 
 echo "Viewing logs for service: $SERVICE"
 
-docker service logs "$SERVICE" -f
+docker compose logs "$SERVICE" -f
