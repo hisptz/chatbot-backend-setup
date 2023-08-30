@@ -71,7 +71,7 @@ database URL in configuration
 
 ```shell
 
-cat /opt/dhis2/dhis2.conf | grep "connection.password=*"
+cat /opt/dhis2/dhis.conf | grep "connection.password=*"
 
 // connection.password = 6528211e6f6a517bf14856a3fddf3c2c35944eb61
 
