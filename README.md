@@ -40,7 +40,7 @@ need to be met:
     - Git version control is a conditional requirement.
 
 **_NB_**: Installation of docker engine and docker compose plugin can be found in
-the [Docker documentation](https://docs.docker.com/engine/install/).
+the [Docker documentation](https://docs.docker.com/engine/install/ubuntu/).
 
 ## Getting Started
 

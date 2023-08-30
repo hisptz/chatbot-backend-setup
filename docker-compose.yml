@@ -13,8 +13,8 @@ services:
       - ./data:/var/lib/postgresql/data
     env_file:
       - .env
-#    profiles:
-#      - donotstart
+  #    profiles:
+  #      - donotstart
 
   chat-bot:
     image: hisptanzania/chat-bot:latest
@@ -34,7 +34,7 @@ services:
   proxy:
     image: hisptanzania/proxy:latest
     ports:
-      - "4040:4040"
+      - "${PROXY_PORT}:${PROXY_PORT}"
     env_file:
       - .env
 
