@@ -7,14 +7,14 @@ services:
       - .env
     volumes:
       - ./whatsapp/tokens:/whatsapp/tokens
-
-
   db:
     image: postgres:latest
     volumes:
       - ./data:/var/lib/postgresql/data
     env_file:
       - .env
+#    profiles:
+#      - donotstart
 
   chat-bot:
     image: hisptanzania/chat-bot:latest
