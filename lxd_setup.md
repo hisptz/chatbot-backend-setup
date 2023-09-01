@@ -82,7 +82,7 @@ explained in the [docs](README.md#backend-server-setup)
 
 When setting up the configuration, Then following changes should be done.
 
-set the `DHIS2_BASE_URL` to point to the dhis2 container. e.g `DHIS2_BASE_URL=http://192.168.0.21:8080`
+set the `DHIS2_BASE_URL` to point to the dhis2 container. e.g `DHIS2_BASE_URL=http://192.168.0.21:8080/<dhis2-container>`
 
 set the `PROXY_API_MOUNT_POINT` to the name of the messenger container starting with a forward slash.
 e.g `PROXY_API_MOUNT_POINT=/<messenger-container>`
